@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="form-container">
+            <h2>Add New To-Do</h2>
+            <form id="todoForm">
+                <div class="form-group">
+                    <label for="todoName">To-Do Name</label>
+                    <input type="text" id="todoName" name="todoName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="todoType">Type</label>
+                    <select id="todoType" name="todoType">
+                        <option value="Task">Task</option>
+                        <option value="Project">Project</option>
+                        <option value="Follow-up">Follow-up</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="todoDate">Date</label>
+                    <input type="date" id="todoDate" name="todoDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="todoRemark">Remark</label>
+                    <input type="text" id="todoRemark" name="todoRemarks" />
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <div class="list-container">
+            <h2>My To-Dos</h2>
+            <ul id="todoList">
+                </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
