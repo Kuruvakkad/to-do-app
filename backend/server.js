@@ -1,6 +1,7 @@
 //importing the libraries
 const express = require('express'); 
 const mysql = require('mysql2/promise');
+require('dotenv').config();
 
 //creating an express app
 const app = express();
@@ -15,10 +16,10 @@ app.use(cors());
 
 // Configure the MySQL database connection
 const dbConfig = {
-    host: 'localhost',
-    user:'root',
-    password: '123Tryit#',
-    database: 'todo_app'
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_DATABASE
 };
 
 let pool;
